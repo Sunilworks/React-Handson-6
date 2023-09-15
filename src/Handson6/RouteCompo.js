@@ -71,8 +71,12 @@ function RouteCompo() {
           <Student />
         </Store.Provider> }/>
         <Route path="/contact" element={<Contact />} />
-        <Route path="/editStudent" element={<EditStudent />} />
-        <Route path="/addStudent" element={<AddNewStudent />} />
+        <Route path="/editStudent" element={<Store.Provider value={{data : studentData,dataFunc : setStudentData}}>
+          <EditStudent />
+        </Store.Provider> }/>
+        <Route path="/addStudent" element={<Store.Provider value={{data : studentData,dataFunc : setStudentData}}>
+          <AddNewStudent />
+        </Store.Provider> }/>
         
       </Routes>
       </BrowserRouter>

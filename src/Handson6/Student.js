@@ -6,7 +6,7 @@ import Store from "./Store";
 function Student() {
   const Navi = useNavigate();
   const displayData = useContext(Store);
-  // console.log(displayData);
+  console.log(displayData);
 
   return (
     <>
@@ -36,7 +36,7 @@ function Student() {
                 <td>{item.Course}</td>
                 <td>{item.Batch}</td>
                 <td className="edit-item">
-                  <NavLink to="/editStudent" state={{index}}>{item.Change}</NavLink>
+                  <NavLink to="/editStudent" state={{index}}>Edit</NavLink>
                 </td>
               </tr>
             );
